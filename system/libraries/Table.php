@@ -107,6 +107,13 @@ class CI_Table {
 	public $function	= NULL;
 
 	/**
+	 * Temporary template storage
+	 *
+	 * @var array
+	 */
+	public $temp;
+
+	/**
 	 * Set the template from the table config file if it exists
 	 *
 	 * @param	array	$config	(default: array())

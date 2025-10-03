@@ -2,6 +2,13 @@
 
 class General extends CI_Controller{
 
+	/**
+	 * Data array for view variables
+	 *
+	 * @var	array
+	 */
+	public $data = array();
+
 	function __construct(){
 		parent::__construct();	
 		date_default_timezone_set("Asia/Manila");

@@ -370,7 +370,7 @@ class Appointment_model extends CI_Model{
 	}
 	
 	
-	public function uploadAttachment($image_data = array(),$emp_id){
+	public function uploadAttachment($emp_id, $image_data = array()){
 		$this->data = array(
 			'patient_no'		=>		$this->input->post('patient_no'),
 			'date_uploaded'		=>		date("Y-m-d h:i:s a"),
@@ -386,7 +386,7 @@ class Appointment_model extends CI_Model{
 
 	}
 	
-	public function uploadImg($image_data = array(),$emp_id){
+	public function uploadImg($emp_id, $image_data = array()){
 		$this->data = array(
 			'picture'	=>		$image_data['file_name']
 		);

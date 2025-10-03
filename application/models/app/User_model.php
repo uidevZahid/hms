@@ -250,7 +250,7 @@ class User_model extends CI_Model{
 		$this->db->update("users",$this->data);	
 	}
 	
-	public function uploadImg($image_data = array(),$emp_id){
+	public function uploadImg($emp_id, $image_data = array()){
 		$this->data = array(
 			'picture'	=>		$image_data['file_name']
 		);

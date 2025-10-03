@@ -286,6 +286,20 @@ abstract class CI_DB_driver {
 	public $cachedir		= '';
 
 	/**
+	 * Auto-initialize flag
+	 *
+	 * @var	bool
+	 */
+	public $autoinit		= TRUE;
+
+	/**
+	 * Strict mode flag
+	 *
+	 * @var	bool
+	 */
+	public $stricton		= FALSE;
+
+	/**
 	 * Cache auto-delete flag
 	 *
 	 * @var	bool

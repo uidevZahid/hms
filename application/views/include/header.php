@@ -4,7 +4,7 @@
 <header class="header" style="background: url('<?php echo base_url()?>public/img/new/header_bar_bg_01.jpg') repeat-x; background-size: 100% 100%; border-bottom:1px solid #CCC">
     <a href="#" class="logo">
         <!-- Add the class icon to your logo image or logo icon to add the margining -->
-        <div class="logo-pms"><img src="<?php echo base_url()?>public/company_logo/<?php echo $companyInfo->logo?>" height="45"></div>
+        <div class="logo-pms"><img src="<?php echo base_url()?>public/img/logo.png"<?php echo $companyInfo->logo?>" height="45"></div>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top" role="navigation" style="background: url('<?php echo base_url()?>public/img/new/header_bar_bg_02.jpg') repeat-x; background-size: 100% 100%; border-bottom:1px solid #CCC">
