@@ -7,7 +7,7 @@
         <div class="logo-pms"><img src="<?php echo base_url()?>public/img/logo.png"<?php echo $companyInfo->logo?>" height="45"></div>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top" role="navigation" style="background: url('<?php echo base_url()?>public/img/new/header_bar_bg_02.jpg') repeat-x; background-size: 100% 100%; border-bottom:1px solid #CCC">
+    <nav class="navbar navbar-static-top" role="navigation" style="background: linear-gradient(to right, #BCB686, #8f8b70ff); border-bottom:1px solid #CCC">
         <!-- Sidebar toggle button-->
         <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
             <span class="sr-only">Toggle navigation</span>
@@ -107,7 +107,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
-                        <li class="user-header bg-light-blue">
+                        <li class="user-header">
                             <?php if($userInfo->picture == ""){?>
                     	<img src="<?php echo base_url()?>public/user_picture/no_avatar.gif" class="img-circle" alt="User Image" />
                     <?php }else{?>
