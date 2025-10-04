@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-require APPPATH.'controllers/general.php'; 
+require APPPATH.'controllers/General.php'; 
 
 class Opd extends General{
 
