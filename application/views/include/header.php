@@ -1,24 +1,63 @@
  <script language="javascript">
     setTimeout(function timeru(){$('.alert').fadeOut(1000)}, 3000);
-   </script> 
-<header class="header" style="background: url('<?php echo base_url()?>public/img/new/header_bar_bg_01.jpg') repeat-x; background-size: 100% 100%; border-bottom:1px solid #CCC">
+   </script>
+
+<style>
+.navbar-btn {
+    transition: all 0.3s ease;
+}
+.navbar-btn:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+.dropdown-menu {
+    animation: slideDown 0.3s ease;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.user-menu .dropdown-toggle {
+    transition: all 0.3s ease;
+}
+.user-menu .dropdown-toggle:hover {
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+}
+@keyframes blink {
+    0%, 49%, 100% {
+        opacity: 1;
+    }
+    50%, 99% {
+        opacity: 0.4;
+    }
+}
+</style>
+
+<header class="header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-bottom: 2px solid rgba(0,0,0,0.1); box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
     <a href="#" class="logo">
-        <!-- Add the class icon to your logo image or logo icon to add the margining -->
-        <div class="logo-pms"><img src="<?php echo base_url()?>public/img/logo.png"<?php echo $companyInfo->logo?>" height="45"></div>
+        <!-- Hospital Logo PNG -->
+        <div class="logo-pms"><img src="<?php echo base_url()?>public/img/Hospital_Logo.png" height="36" style="width: auto; margin: 5px 0; object-fit: contain;"></div>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top" role="navigation" style="background: linear-gradient(to right, #BCB686, #8f8b70ff); border-bottom:1px solid #CCC">
+    <nav class="navbar navbar-static-top" role="navigation" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-bottom: none; padding: 0;">
         <!-- Sidebar toggle button-->
-        <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+        <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button" style="color: white; transition: all 0.3s ease;">
             <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <span class="icon-bar" style="background-color: white;"></span>
+            <span class="icon-bar" style="background-color: white;"></span>
+            <span class="icon-bar" style="background-color: white;"></span>
         </a>
-        <div class="logo2"> 
+        <div class="logo2" style="color: white; font-weight: 600; letter-spacing: 0.5px; font-size: 18px;">
                 <?php echo $companyInfo->company_name?>
         </div>
-        <div class="navbar-right">
+        <div class="navbar-right" style="padding-right: 20px;">
             <ul class="nav navbar-nav">
                 
                <!-- <li class="dropdown messages-menu">
@@ -101,29 +140,31 @@
                 </li>-->
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="glyphicon glyphicon-user"></i>
-                        <span><?php echo $userInfo->firstname." ".$userInfo->lastname;?><i class="caret"></i></span>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: white; font-weight: 700; padding: 15px 20px; font-size: 15px; letter-spacing: 0.3px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.15)'; this.style.borderRadius='4px';" onmouseout="this.style.backgroundColor='transparent'; this.style.borderRadius='0'">
+                        <i class="glyphicon glyphicon-user" style="margin-right: 8px; font-size: 16px;"></i>
+                        <span><?php echo $userInfo->firstname." ".$userInfo->lastname;?></span>
+                        <i class="fa fa-circle" style="font-size: 8px; margin-left: 8px; color: #27ae60; animation: blink 2s infinite;"></i>
+                        <i class="caret" style="margin-left: 5px;"></i>
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" style="border-radius: 8px; box-shadow: 0 8px 16px rgba(0,0,0,0.15); border: none; margin-top: 5px;">
                         <!-- User image -->
-                        <li class="user-header">
+                        <li class="user-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px 8px 0 0;">
                             <?php if($userInfo->picture == ""){?>
-                    	<img src="<?php echo base_url()?>public/user_picture/no_avatar.gif" class="img-circle" alt="User Image" />
+                    	<img src="<?php echo base_url()?>public/user_picture/no_avatar.gif" class="img-circle" alt="User Image" style="border: 3px solid white;"/>
                     <?php }else{?>
-                    	<img src="<?php echo base_url()?>public/user_picture/<?php echo $userInfo->picture;?>" class="img-circle" alt="User Image" />
+                    	<img src="<?php echo base_url()?>public/user_picture/<?php echo $userInfo->picture;?>" class="img-circle" alt="User Image" style="border: 3px solid white;"/>
                     <?php }?>
-                            <p>
-                                <?php echo $userInfo->firstname." ".$userInfo->lastname;?> <br /> <?php echo $userInfo->designation;?>
+                            <p style="margin-top: 10px; margin-bottom: 0;">
+                                <?php echo $userInfo->firstname." ".$userInfo->lastname;?> <br /> <small><?php echo $userInfo->designation;?></small>
                             </p>
                         </li>
                         <!-- Menu Footer-->
-                        <li class="user-footer">
+                        <li class="user-footer" style="padding: 15px; background: #f8f9fa; border-radius: 0 0 8px 8px; border-top: 1px solid #e9ecef;">
                             <div class="pull-left">
-                                <a href="<?php echo base_url()?>myprofile" class="btn btn-default btn-flat">Profile</a>
+                                <a href="<?php echo base_url()?>myprofile" class="btn btn-default btn-sm" style="border-radius: 4px; border: 1px solid #667eea; color: #667eea; font-weight: 500;">Profile</a>
                             </div>
                             <div class="pull-right">
-                                <a href="<?php echo base_url()?>login/logout" class="btn btn-default btn-flat">Sign out</a>
+                                <a href="<?php echo base_url()?>login/logout" class="btn btn-danger btn-sm" style="border-radius: 4px; background: #667eea; border: 1px solid #667eea; color: white; font-weight: 500;">Sign Out</a>
                             </div>
                         </li>
                     </ul>

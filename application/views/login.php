@@ -34,7 +34,7 @@
 		
 		body {
 			font-family: 'Poppins', sans-serif;
-			background: linear-gradient(135deg, #BCB686 0%, #c5ba7eff 100%);
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 			min-height: 100vh;
 			display: flex;
 			align-items: center;
@@ -175,7 +175,7 @@
 		.btn-login {
 			width: 100%;
 			padding: 15px;
-			background: linear-gradient(135deg, #706d58ff 0%, #BCB686 100%);
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 			border: none;
 			border-radius: 10px;
 			color: white;
@@ -261,7 +261,7 @@
 					<!-- <h2>Unique Physiotherapy </h2> -->
 				<!-- Logo Section -->
 				<div class="logo-section">
-					<img src="<?php echo base_url()?>public/img/logo_hero.png" alt="Hospital Management System Logo">
+					<img src="<?php echo base_url()?>public/img/hospital_logo.svg" alt="Hospital Management System Logo">
 				</div>
 				</div>
 			</div>
